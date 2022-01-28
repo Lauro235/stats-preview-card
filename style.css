@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/* 
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+/* variables */
+
+:root {
+  --heading: normal normal bold clamp(26px, 7vw, 40px)/clamp(30px, 9vw, 45px) 'Inter', sans-serif;
+  --heading-desktop: normal normal bold clamp(21px, 5vw, 35px)/clamp(25px, 9vw, 40px) 'Inter', sans-serif;
+  --paragraph: normal normal normal clamp(12px, 4vw, 22px)/clamp(16px, 6vw, 26px) 'Inter', sans-serif;
+  --paragraph-desktop: normal normal normal clamp(12px, 5vw, 18px)/clamp(24px, 6vw, 30px) 'Inter', sans-serif;
+  --stats-bold: normal normal bold clamp(18px, 5vw, 25px)/clamp(18px, 7vw, 24px) 'Lexend Deca', sans-serif;
+  --stats-bold-desktop: normal normal bold 2vw/3vw 'Lexend Deca', sans-serif;
+  --stats: normal normal normal clamp(15px, 5vw, 18px)/clamp(24px, 5vw, 28px) 'Lexend Deca', sans-serif;
+  --stats-desktop: normal normal normal 1vw/2.5vw 'Lexend Deca', sans-serif;
+
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,*::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  background-color: hsl(233, 47%, 7%);
+  font-size: 15px;
+}
+
+.attribution {
+  font: var(--paragraph);
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 0 1rem 1.6rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.main-wrapper {
+  width: 85%;
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: hsl(244, 38%, 16%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.main-wrapper {
+  border-radius: 1rem;
+}
+
+.header-image-wrapper {
+  background-color: hsl(277, 64%, 25%);
+  height: fit-content;
+  border: none;
+}
+
+.header-image {
+  width: 100%;
+  opacity: 0.2;
+  height: 100%;
+  display: block;
+}
+
+.main-text-content, .text-content {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 0.8rem;
+}
+
+.main-heading {
+  font: var(--heading);
+  color: hsl(0, 0%, 100%);
+}
+
+.heading-highlight {
+  color: hsl(277, 64%, 61%);
+}
+
+.header-image-wrapper {
+  width: 100%;
+}
+
+.text-content {
+  font: var(--paragraph);
+  color: hsla(0, 0%, 100%, 0.75);
+  padding-top: 0.8rem;
+}
+
+.stats-wrapper {
+  padding: 0.8rem 0;
+}
+
+.inner-stats {
+  color: hsla(0, 0%, 100%, 0.6);
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font: var(--stats);
+}
+
+.stats-highlight {
+  padding-bottom: 6px;
+  font: var(--stats-bold);
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width:1100px) {
+  .main-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    min-width: 800px;
+    max-width: 1350px;
+  }
+  .main-text-content {
+    padding-top: 1.5rem;
+    width: 85%;
+    margin: 0;
+  }
+  .left-desktop {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 2rem;
+  }
+  .right-desktop {
+    width: 50%;
+  }
+  .stats-wrapper {
+    margin: 0;
+    display: flex;
+    justify-self: flex-start;
+    justify-content: space-between;
+    width: 75%;
+  }
+  .inner-stats {
+    font: var(--stats-desktop);
+  }
+  .main-heading {
+    font: var(--heading-desktop);
+  }
+  .text-content {
+    font: var(--paragraph-desktop);
+    justify-self: flex-start;
+    width: 85%;
+  }
+  .stats-highlight {
+    font: var(--stats-bold-desktop)
+  }
+  .main-heading, .stats-wrapper {
+    padding: 0 8% 0;
+  }
+}
